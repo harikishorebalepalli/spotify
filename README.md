@@ -1,9 +1,13 @@
 # SpotifyAutocomplete
 
 Versions used:
+
 Angular CLI: 13.2.6
+
 Node: 16.14.0
+
 Package Manager: npm 8.3.1
+
 OS: darwin x64
 
 ## Development server
