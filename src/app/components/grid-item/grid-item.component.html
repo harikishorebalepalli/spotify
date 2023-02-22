@@ -1,0 +1,10 @@
+<div class="grid-item" *ngIf="item">
+  <img
+    class="grid-item__img"
+    [ngClass]="item.type == 'artist' ? 'circle' : ''"
+    [src]="getImage()"
+    [alt]="item.name"
+  />
+  <h4 class="grid-item__title ellipsis">{{ item.name }}</h4>
+  <span class="grid-item__subtext">{{ subText }}</span>
+</div>

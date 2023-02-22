@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@import "ngx-toastr/toastr";
+html,
+body {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.circle {
+  border-radius: 50% !important;
+}
+
+$layout_bp_mobile: 360px;
+$layout_bp_tablet: 800px;
+$layout_bp_desktop: 1000px;
+
+$dark-gray: #282828;
+$light-gray: #b3b3b3;
+$black: black;
+
+@mixin tablet {
+  @media only screen and (min-width: $layout_bp_tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $layout_bp_desktop) {
+    @content;
+  }
+}

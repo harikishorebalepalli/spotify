@@ -1,0 +1,48 @@
+<div class="recommendation">
+  <div class="recommendation__input-container">
+    <img
+      class="recommendation__input-container__img"
+      src="assets/images/favicon.ico"
+      alt="spotify image"
+    />
+    <input
+      class="recommendation__input-container__input"
+      type="text"
+      id="inputSearch"
+      placeholder="What do you want to listen to?"
+      [(ngModel)]="searchText"
+      (ngModelChange)="search()"
+    />
+  </div>
+
+  <div class="recommendation__content" *ngIf="this.searchText?.length">
+    <div
+      class="recommendation__content__items-container"
+      *ngFor="let key of searchEntities"
+    >
+      <div class="recommendation__content__title-container">
+        <h2>{{ key }}</h2>
+      </div>
+      <div class="recommendation__content__grid-item">
+        <app-grid-item
+          [item]="entity"
+          *ngFor="let entity of searchResults[key]"
+        ></app-grid-item>
+      </div>
+    </div>
+  </div>
+
+  <div class="recommendation__content" *ngIf="!this.searchText?.length">
+    <div class="recommendation__content__items-container">
+      <div class="recommendation__content__title-container">
+        <h2>Latest Releases</h2>
+      </div>
+      <div class="recommendation__content__grid-item">
+        <app-grid-item
+          [item]="entity"
+          *ngFor="let entity of latestReleases"
+        ></app-grid-item>
+      </div>
+    </div>
+  </div>
+</div>

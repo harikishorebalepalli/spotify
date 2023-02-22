@@ -1,0 +1,41 @@
+@import "../../../styles.scss";
+
+.recommendation {
+  &__input-container {
+    margin-top: 3rem;
+    margin-left: 30%;
+    display: flex;
+    &__img {
+      height: 2.5rem;
+      margin-right: 0.25rem;
+      padding: 0.25rem;
+    }
+    &__input {
+      width: 50%;
+      padding: 0.75rem 0.5rem;
+      border-radius: 500px;
+    }
+  }
+
+  &__content {
+    &__title-container {
+      width: 97%;
+      margin: 0 auto;
+    }
+    &__grid-item {
+      @include desktop {
+        max-width: 98%;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__items-container {
+      margin: 0 auto;
+      width: 60vw;
+      padding-left: 5rem;
+    }
+  }
+}
